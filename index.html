@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+
+
+
+<div class="timer">
+
+<h2 id="cuenta_atras"></h2>
+
+<audio id="audioUno" src="sonidos/metronomo.mp3" type = "audio/mpeg"></audio>
+<audio id="audioDos" src="sonidos/correcto.mp3" type = "audio/mpeg"></audio>
+<audio id="audioTres" src="sonidos/incorrecto.mp3" type = "audio/mpeg"></audio>
+<audio id="audioCuatro" src="sonidos/sonido_ganador.mp3" type = "audio/mpeg"></audio>
+
+</div>
+
+
+    <h1>Dobles Animales</h1>
+    <p class="animate__animated animate__pulse animate__infinite animate__slow">
+      ¡Encuentra al doble lo antes posible!
+    </p>
+
+    <button id="boton-jugar">
+      <span>Jugar</span>
+    </button>
+
+    <div class="contenedorDos" id="contenedor"></div>
+
+    <div class="cuadradoCasaRaton"></div>
+
+    <img class="animales" src="imagenes/gifs-ratones.gif" alt="" />
+    <script src="js/script.js"></script>
+  </body>
+</html>

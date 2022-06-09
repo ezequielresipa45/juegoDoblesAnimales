@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #eb3349; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f45c43,
+    #eb3349
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f45c43,
+    #eb3349
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cuadradoCasaRaton {
+  width: 50px;
+  height: 50px;
+  background-color: #000000;
+  position: absolute;
+  bottom: 0;
+  right: 98.5%;
+
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  transform: rotateY(60deg);
+}
+
+.animales {
+  position: absolute;
+  width: 100px;
+  height: 100;
+  bottom: 0;
+
+  animation-duration: 25s;
+  animation-name: slider;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slider {
+  from {
+    right: 0%;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+h1 {
+  margin-top: 0;
+
+  font-family: "Patrick Hand", cursive;
+  font-size: 70px;
+  color: #ffffff;
+  letter-spacing: 5px;
+}
+
+p {
+  font-family: "Patrick Hand", cursive;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+.contenedorDos {
+  display: none;
+  width: 780px;
+  height: 512px;
+  padding: 2px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-radius: 7px;
+}
+
+.cuadrado {
+  width: 175px;
+  height: 145.1px;
+  margin: 2px;
+  background: #ff8008; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffc837,
+    #ff8008
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffc837,
+    #ff8008
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  display: inline-flex;
+
+  border-radius: 5px;
+}
+
+.cuadrado:hover {
+  cursor: pointer;
+
+  background: #eb3349; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f45c43,
+    #eb3349
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f45c43,
+    #eb3349
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* From uiverse.io by @abrahamcalsin */
+button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #183153;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: none;
+}
+
+button:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #ffd401;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+
+button:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+button span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover span {
+  color: #183153;
+  animation: scaleUp 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.timer {
+  
+margin-top: 10px;
+  position: absolute;
+  top: 0;
+  left: 85%;
+  
+  padding: 10px;
+  border-radius: 4px;
+
+  display: none;
+}
+
+#cuenta_atras{
+  font-family: "Patrick Hand", cursive;
+  font-size: 30px;
+  color: #ffffff;
+  letter-spacing: 5px;
+
+}
