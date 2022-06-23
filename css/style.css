@@ -3,7 +3,15 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
+  overflow-y: hidden;
+}
+
+.contenedorJuegoDoblesAnimales {
   background: #eb3349; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -196,22 +204,275 @@ button:hover span {
 }
 
 .timer {
-  
-margin-top: 10px;
+  margin-top: 10px;
   position: absolute;
   top: 0;
   left: 85%;
-  
+
   padding: 10px;
   border-radius: 4px;
 
   display: none;
 }
 
-#cuenta_atras{
+#cuenta_atras {
   font-family: "Patrick Hand", cursive;
   font-size: 30px;
   color: #ffffff;
   letter-spacing: 5px;
-
 }
+
+/* FIN CSS DE JUEGO DOBLES ANIMALES **************************************************************** */
+
+.paginaPrincipal {
+  height: 100vh;
+  width: 100%;
+
+  background-image: url("../imagenes/Gamingbanner_generated.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+}
+
+.paginaPrincipal .nieve {
+  width: 50%;
+  height: 500px;
+  position: absolute;
+  top: 0;
+}
+
+.paginaPrincipal .y3il {
+  width: 150px;
+
+  bottom: 0px;
+  position: absolute;
+
+  animation-duration: 25s;
+  animation-name: correr;
+  animation-iteration-count: infinite;
+}
+
+@keyframes correr {
+  from {
+    left: 0%;
+  }
+
+  to {
+    left: 90%;
+    opacity: 0;
+  }
+}
+
+.contenedorCajaJuegos {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #000000,
+    #000658
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #000000,
+    #000658
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 1000px;
+
+  margin: 0;
+  padding: 95px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* CARTA JUEGO UNO */
+
+/* From uiverse.io by @Tiagoadag */
+.cardUno {
+  width: 400px;
+  height: 250px;
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.card2 {
+  width: 400px;
+  height: 250px;
+  background-color: #1a1a1a;
+  border-radius: 18px;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card2 img {
+  width: 300px;
+  border-radius: 25px;
+}
+
+.card2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.cardUno:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.3);
+}
+
+.jugarAhora {
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.jugarAhora button {
+  width: 140px;
+  height: 40px;
+}
+
+.jugarAhora button span {
+  font-size: 8px;
+}
+
+.jugarAhora p {
+  font-size: 15px;
+
+  padding: 0;
+  margin: 0;
+}
+
+.jugarAhora h2 {
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+/* // FIN CARTA JUEGO UNO */
+
+.cardDos {
+  width: 400px;
+  height: 250px;
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.cardDos .cardDosImg {
+  width: 300px;
+  height: 150px;
+}
+
+/* ESTILOS PARA BOTON BAJAR */
+
+/* From uiverse.io by @mrhyddenn */
+.scrolldown {
+  --color: white;
+  --sizeX: 30px;
+  --sizeY: 50px;
+  position: relative;
+
+  top: 200px;
+  width: var(--sizeX);
+  height: var(--sizeY);
+  margin-left: var(sizeX / 2);
+  border: calc(var(--sizeX) / 10) solid var(--color);
+  border-radius: 50px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.scrolldown::before {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: var(--color);
+  border-radius: 100%;
+  animation: scrolldown-anim 2s infinite;
+  box-sizing: border-box;
+  box-shadow: 0px -5px 3px 1px #2a547066;
+}
+
+@keyframes scrolldown-anim {
+  0% {
+    opacity: 0;
+    height: 6px;
+  }
+
+  40% {
+    opacity: 1;
+    height: 10px;
+  }
+
+  80% {
+    transform: translate(0, 20px);
+    height: 10px;
+    opacity: 0;
+  }
+
+  100% {
+    height: 3px;
+    opacity: 0;
+  }
+}
+
+.chevrons {
+  padding: 6px 0 0 0;
+  margin-left: -3px;
+  margin-top: 48px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chevrons h2 {
+  color: white;
+  margin-top: 15px;
+}
+
+.chevrondown {
+  margin-top: -6px;
+  position: relative;
+  border: solid var(--color);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+}
+
+.chevrondown:nth-child(odd) {
+  animation: pulse54012 500ms ease infinite alternate;
+}
+
+.chevrondown:nth-child(even) {
+  animation: pulse54012 500ms ease infinite alternate 250ms;
+}
+
+@keyframes pulse54012 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.5;
+  }
+}
+
+/* FIN ESTILOS BOTON BAJAR */

@@ -9,6 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
+      href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
@@ -19,36 +24,92 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- SONIDOS PARA DOBLES ANIMALES -->
+    <div class="timer">
+      <h2 id="cuenta_atras"></h2>
 
+      <audio
+        id="audioUno"
+        src="sonidos/metronomo.mp3"
+        type="audio/mpeg"
+      ></audio>
+      <audio id="audioDos" src="sonidos/correcto.mp3" type="audio/mpeg"></audio>
+      <audio
+        id="audioTres"
+        src="sonidos/incorrecto.mp3"
+        type="audio/mpeg"
+      ></audio>
+      <audio
+        id="audioCuatro"
+        src="sonidos/sonido_ganador.mp3"
+        type="audio/mpeg"
+      ></audio>
+    </div>
 
+    <div class="paginaPrincipal">
+      <img class="nieve" src="imagenes/nieveGif.gif" alt="" />
 
+      <img class="y3il" src="imagenes/Y3il.gif" alt="" />
 
-<div class="timer">
+      <a href="#cajaParaJuegos">
+        <div class="scrolldown" style="--color: skyblue">
+          <div class="chevrons">
+            <div class="chevrondown"></div>
 
-<h2 id="cuenta_atras"></h2>
+            <div class="chevrondown"></div>
 
-<audio id="audioUno" src="sonidos/metronomo.mp3" type = "audio/mpeg"></audio>
-<audio id="audioDos" src="sonidos/correcto.mp3" type = "audio/mpeg"></audio>
-<audio id="audioTres" src="sonidos/incorrecto.mp3" type = "audio/mpeg"></audio>
-<audio id="audioCuatro" src="sonidos/sonido_ganador.mp3" type = "audio/mpeg"></audio>
+            <h2>BAJAR</h2>
+          </div>
+        </div>
+      </a>
+    </div>
 
-</div>
+    <div class="contenedorCajaJuegos" id="cajaParaJuegos">
+      <div class="cardUno">
+        <div class="card2">
+          <img src="imagenes/memoria_salvajes.jpg" alt="" />
+          <div class="jugarAhora">
+            <p>Animales Salvajes</p>
+            <button class="botonMemoriaSalvajes">
+              <span>JUGAR AHORA</span>
+            </button>
+          </div>
+        </div>
+      </div>
 
+      <div class="cardDos">
+        <div class="card2">
+          <img class="cardDosImg" src="imagenes/adivinaElPais.png" alt="" />
+          <div class="jugarAhora">
+            <p>Adivina el País</p>
+            <button class="botonAdivinaElPais">
+              <span>JUGAR AHORA</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <h1>Dobles Animales</h1>
-    <p class="animate__animated animate__pulse animate__infinite animate__slow">
-      ¡Encuentra al doble lo antes posible!
-    </p>
+    <div class="contenedorJuegoDoblesAnimales">
+      <h1>Dobles Animales</h1>
 
-    <button id="boton-jugar">
-      <span>Jugar</span>
-    </button>
+      <p
+        class="animate__animated animate__pulse animate__infinite animate__slow"
+      >
+        ¡Encuentra al doble lo antes posible!
+      </p>
 
-    <div class="contenedorDos" id="contenedor"></div>
+      <button id="boton-jugar">
+        <span>Jugar</span>
+      </button>
 
-    <div class="cuadradoCasaRaton"></div>
+      <div class="contenedorDos" id="contenedor"></div>
 
-    <img class="animales" src="imagenes/gifs-ratones.gif" alt="" />
+      <div class="cuadradoCasaRaton"></div>
+
+      <img class="animales" src="imagenes/gifs-ratones.gif" alt="" />
+    </div>
+
     <script src="js/script.js"></script>
   </body>
 </html>

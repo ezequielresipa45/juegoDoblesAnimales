@@ -1,5 +1,7 @@
 let contenedor = document.getElementById("contenedor");
 
+let botonJugar = document.getElementById("boton-jugar");
+
 //EL CONTENEDOR DE LA TARJETA PERRO UNO
 let elementoUnoDiv = document.createElement("div");
 elementoUnoDiv.className = "cuadrado";
@@ -143,13 +145,7 @@ for (let index = 0; index < nuevoArray.length; index++) {
   contenedor.appendChild(array[index]);
 }
 
-let botonJugar = document.getElementById("boton-jugar");
-
-
-
 /*******************************************************************************************************************/
-
-
 
 //CRONOMETRO PARA EL JUEGO
 
@@ -183,6 +179,8 @@ function actualizarTiempo() {
   }
 }
 
+// BOTON JUGAR FUNCION PARA MOSTRAR EL JUEGO
+
 botonJugar.addEventListener("click", function () {
   timerClaseCss.style.display = "inline";
   contenedor.style.display = "flex";
@@ -191,7 +189,6 @@ botonJugar.addEventListener("click", function () {
 
   actualizarTiempo();
 });
-
 
 /**************************************************************************************************************************/
 
@@ -208,8 +205,6 @@ function seleccionar(tarjetaUno, imagen, tarjetaDos) {
       audioCorrecto.play();
 
       audioCuentaAtras.pause();
-
-
 
       // CONDICIONAL QUE PRUEBA QUE LA IMAGEN ESTE CON EL SRC COMPLETO, DE SER ASÍ EN TODOS LOS CASOS, GANASTE!
 
@@ -232,13 +227,10 @@ function seleccionar(tarjetaUno, imagen, tarjetaDos) {
     }
   }
 
-  const time = setTimeout(borrar, 400);
+  const time = setTimeout(borrar, 800); //VELOCIDAD DEL JUEGO
 }
 
-
-
 // Se le agrega el evento click con la funcion seleccionar al hacer click en cada tarjeta
-
 
 tarjetaPerroUno.addEventListener("click", () => {
   return seleccionar(tarjetaPerroUno, "imagenes/perro.jpg", tarjetaPerroDos);
@@ -257,11 +249,19 @@ tarjetaGatoDos.addEventListener("click", () => {
 });
 
 tarjetaElefanteUno.addEventListener("click", () => {
-  return seleccionar(tarjetaElefanteUno, "imagenes/elefante.jpg", tarjetaElefanteDos);
+  return seleccionar(
+    tarjetaElefanteUno,
+    "imagenes/elefante.jpg",
+    tarjetaElefanteDos
+  );
 });
 
 tarjetaElefanteDos.addEventListener("click", () => {
-  return seleccionar(tarjetaElefanteDos, "imagenes/elefante.jpg", tarjetaElefanteUno);
+  return seleccionar(
+    tarjetaElefanteDos,
+    "imagenes/elefante.jpg",
+    tarjetaElefanteUno
+  );
 });
 
 tarjetaLeonUno.addEventListener("click", () => {
@@ -286,4 +286,30 @@ tarjetaMonoUno.addEventListener("click", () => {
 
 tarjetaMonoDos.addEventListener("click", () => {
   return seleccionar(tarjetaMonoDos, "imagenes/mono.jpg", tarjetaMonoUno);
+});
+
+// FIN ALGORITMO JUEGO DE ANIMALES ..................................................................//
+
+// Variables para ocultar contenedor index principal y mostrar los juegos a travez de sus botones.
+
+let contenedorJuegoAnimales = document.getElementsByClassName(
+  "contenedorJuegoDoblesAnimales"
+)[0];
+
+contenedorJuegoAnimales.style.display = "none";
+
+let paginaPrincipal = document.getElementsByClassName("paginaPrincipal")[0];
+
+let botonMemoriaSalvajes = document.getElementsByClassName(
+  "botonMemoriaSalvajes"
+)[0];
+
+let contenedorCajaJuegos = document.getElementsByClassName(
+  "contenedorCajaJuegos"
+)[0];
+
+botonMemoriaSalvajes.addEventListener("click", () => {
+  paginaPrincipal.style.display = "none";
+  contenedorCajaJuegos.style.display = "none";
+  contenedorJuegoAnimales.style.display = "flex";
 });
